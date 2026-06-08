@@ -1,308 +1,175 @@
-\# Movie Recommendation System
+# 🎬 Movie Recommendation System
 
-
-
-\## Project Overview
-
-
+## Overview
 
 This project implements a Content-Based Movie Recommendation System using Natural Language Processing (NLP) and Machine Learning techniques.
 
+The recommendation engine analyzes movie descriptions and recommends similar movies using TF-IDF Vectorization and Cosine Similarity.
 
+Given a movie title, the system returns a list of movies with similar content and themes.
 
-The recommendation engine analyzes movie descriptions and identifies similar movies using TF-IDF Vectorization and Cosine Similarity. Given a movie title, the system returns a list of movies with similar content.
+---
 
+## Features
 
+* Content-Based Movie Recommendations
+* Natural Language Processing (NLP)
+* TF-IDF Vectorization
+* Cosine Similarity Search
+* Exploratory Data Analysis (EDA)
+* Model Serialization using Pickle
+* Reproducible Training Pipeline
 
-\---
+---
 
-
-
-\## Objective
-
-
-
-The objective of this project is to build a recommendation engine capable of suggesting movies based on textual similarity between movie descriptions.
-
-
-
-\---
-
-
-
-\## Dataset
-
-
+## Dataset
 
 TMDB 5000 Movie Dataset
 
-
-
 Files Used:
 
-
-
-\* tmdb\_5000\_movies.csv
-
-\* tmdb\_5000\_credits.csv
-
-
+* tmdb_5000_movies.csv
+* tmdb_5000_credits.csv
 
 Dataset contains:
 
+* Movie Titles
+* Plot Overviews
+* Genres
+* Keywords
+* Cast Information
+* Crew Information
+* Ratings and Popularity Metrics
 
+---
 
-\* Movie Titles
+## Technologies Used
 
-\* Overview / Plot Summary
+### Programming Language
 
-\* Genres
+* Python
 
-\* Keywords
+### Libraries
 
-\* Cast Information
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* Scikit-Learn
+* Jupyter Notebook
 
-\* Crew Information
+### Machine Learning Techniques
 
+* TF-IDF Vectorization
+* Cosine Similarity
+* Content-Based Recommendation Systems
 
+---
 
-\---
+## Project Workflow
 
-
-
-\## Technologies Used
-
-
-
-\### Programming Language
-
-
-
-\* Python
-
-
-
-\### Libraries
-
-
-
-\* Pandas
-
-\* NumPy
-
-\* Matplotlib
-
-\* Seaborn
-
-\* Scikit-Learn
-
-
-
-\### Machine Learning Techniques
-
-
-
-\* TF-IDF Vectorization
-
-\* Cosine Similarity
-
-\* Content-Based Recommendation Systems
-
-
-
-\---
-
-
-
-\## Project Workflow
-
-
-
-\### 1. Data Collection
-
-
+### 1. Data Collection
 
 Loaded movie and credits datasets from TMDB.
 
+### 2. Data Preprocessing
 
+* Merged movie and credit datasets
+* Removed missing values
+* Selected relevant features
+* Cleaned textual data
 
-\### 2. Data Preprocessing
+### 3. Feature Engineering
 
+Created textual feature representations from movie overviews.
 
+### 4. Vectorization
 
-\* Merged datasets
+Converted movie descriptions into numerical vectors using TF-IDF.
 
-\* Removed missing values
-
-\* Selected relevant features
-
-\* Cleaned textual data
-
-
-
-\### 3. Feature Engineering
-
-
-
-Created a combined text representation using movie overviews.
-
-
-
-\### 4. Vectorization
-
-
-
-Converted text into numerical vectors using TF-IDF Vectorizer.
-
-
-
-\### 5. Similarity Calculation
-
-
+### 5. Similarity Calculation
 
 Computed pairwise movie similarity using Cosine Similarity.
 
+### 6. Recommendation Engine
 
+Generated recommendations based on similarity scores.
 
-\### 6. Recommendation Engine
+---
 
-
-
-Developed a function that recommends similar movies based on user input.
-
-
-
-\---
-
-
-
-\## Example
-
-
+## Example
 
 Input:
 
-
-
 Interstellar
-
-
 
 Output:
 
+* The Martian
+* Gravity
+* Arrival
+* Contact
+* Moon
 
+(Recommendations may vary depending on preprocessing.)
 
-\* The Martian
+---
 
-\* Arrival
-
-\* Gravity
-
-\* Contact
-
-\* Moon
-
-
-
-(Note: recommendations may vary slightly depending on preprocessing and dataset version.)
-
-
-
-\---
-
-
-
-\## Results
-
-
-
-Successfully developed a recommendation engine capable of identifying and recommending similar movies based on textual features.
-
-
-
-The system demonstrates practical applications of:
-
-
-
-\* Natural Language Processing
-
-\* Information Retrieval
-
-\* Similarity Search
-
-\* Recommendation Systems
-
-
-
-\---
-
-
-
-\## Future Improvements
-
-
-
-\* Incorporate Genres
-
-\* Incorporate Keywords
-
-\* Incorporate Cast Information
-
-\* Incorporate Director Information
-
-\* Deploy using Streamlit
-
-\* Integrate TMDB API for posters and metadata
-
-\* Hybrid Recommendation System using ratings
-
-
-
-\---
-
-
-
-\## Repository Structure
-
-
+## Repository Structure
 
 movie-recommendation-system/
 
-
-
 ├── data/
 
+│   ├── tmdb_5000_movies.csv
 
+│   └── tmdb_5000_credits.csv
 
 ├── notebooks/
 
-
-
-├── models/
-
-
+│   └── recommendation_system.ipynb
 
 ├── results/
 
-
-
 ├── README.md
 
+├── requirements.txt
 
+└── .gitignore
 
-└── requirements.txt
+---
 
+## Model Files
 
+Serialized model files are hosted separately on [Hugging Face](https://huggingface.co/CyborgC/movie-recommendation-system) due to repository size considerations.
 
-\---
+The notebook can regenerate all model artifacts locally.
 
+---
 
+## Key Learnings
 
-\## Author
+* Natural Language Processing
+* Feature Engineering
+* Similarity Search
+* Recommendation Systems
+* Machine Learning Workflows
+* Data Analysis and Visualization
 
+---
 
+## Future Improvements
+
+* Include Genres in Recommendations
+* Include Keywords
+* Include Cast Information
+* Include Director Information
+* Hybrid Recommendation System
+* Streamlit Web Application
+* TMDB API Integration for Posters
+
+---
+
+## Author
 
 Built as a Machine Learning and NLP portfolio project.
-
-
-
